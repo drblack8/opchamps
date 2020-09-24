@@ -1,4 +1,31 @@
+# OPChamps - An op.gg Clone
 
+This markdown file includes a feature list, project build run-down, and reacts generic readme.
+
+# Features:
+
+  - Login/Auth
+    > Users will have dedicated database using either mongo/sql. Where user info will be stored and tied to info such as comments and favorite champions.
+  - Champions page and search functionality
+    > The constantly-updated Riot API will fill the site with new and old League of Legends Champions and their stats/info. The start page will essentially be a search results page that shows all champions(approx 150). A search bar that will perpetually exist in the navbar will allow a user to narrow the results based on champion name or a champions most played role.
+  - Champion page
+    > A series of pages for a champion that will show statistics and detailed information for a specific League of Legends champion.
+  - Matchups
+    > A preview and button will lead to a matchup page that shows favorable matchups for a specific champion as well as its counter-matchups.
+  - User comments
+    > A user will be able to leave comments on a champion specific page as well as specific matchups.
+  - User favorites
+    > A sidebar on the start page will show a users favorite champions and will allow the user to quickly find their page without a search.
+
+# User stories:
+
+ - As a OPChamps User, I'd like to be able to leave my thoughts on a specific champion for other users to see.
+ - As a OPChamps User, I'd like to be able to leave my thoughts on a specific matchup for other users to see.
+ - As a OPChamps User, I'd like to see specific item builds on champions to help me while playing.
+ - As a OPChamps User, I'd like to be able to search for a specific champion and see their info/stats.
+ - As a OPChamps User, I'd like to be able to favorite champions for easy access in the future.
+
+# React docs:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
