@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING,
         validates: {
-          len: [1, 255],
+          len: [4, 40],
         },
       },
       hashedPassword: {
@@ -42,6 +42,9 @@ module.exports = (sequelize, DataTypes) => {
         loginUser: {
           attributes: {},
         },
+        profile: {
+          exclude: ["hashedPassword", "email", "updatedAt"],
+        }
       },
     }
   );
