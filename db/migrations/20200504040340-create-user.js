@@ -15,7 +15,7 @@ module.exports = {
       },
       username: {
         allowNull: false,
-        type: Sequelize.STRING(255),
+        type: Sequelize.STRING(40),
         unique: true,
       },
       hashedPassword: {
@@ -27,11 +27,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("NOW")
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn("NOW")
       }
     });
   },
