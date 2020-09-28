@@ -76,7 +76,7 @@ app.use(function (err, _req, res, _next) {
     res.json({
       message: err.message,
       stack: err.stack,
-      error: JSON.parse(JOSN.stringify(err)),
+      error: JSON.parse(JSON.stringify(err)),
     });
   }
 });

@@ -5,7 +5,7 @@ import App from './App';
 
 if (process.env.NODE_ENV !== 'production') {
   const getCSRFToken = () => {
-    return fetch("/api/csrf/token");
+    return fetch("/api/token");
   };
 
   getCSRFToken();

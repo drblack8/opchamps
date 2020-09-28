@@ -1,5 +1,4 @@
 import Cookies from "js-cookie";
-import { set } from "../../../app";
 
 const SET_USER = "auth/SET_USER";
 const setUser = (user) => {
@@ -10,7 +9,7 @@ const setUser = (user) => {
 };
 export const login = (username, password) => {
   return async (dispatch) => {
-    const res = fetch("api/session", {
+    const res = await fetch("api/session", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -18,10 +17,21 @@ export const login = (username, password) => {
       },
       body: JSON.stringify({ username, password }),
     });
-    res.data = await res.json();
+    const data = await res.json();
     if (res.ok) {
-      dispatch(setUser(res.data));
+      dispatch(setUser(data.user));
     }
     return res;
   };
 };
+
+window.login = login;
+
+export default function authReducer(state={}, action) {
+    switch (action.type) {
+        case SET_USER:
+                return action.user;
+        default:
+            return state
+    }
+}

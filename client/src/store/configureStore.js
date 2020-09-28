@@ -1,16 +1,19 @@
-import { createStore, compose, combineReducers, applyMiddleWare } from "redux";
-import { thunk } from "redux-thunk";
+import { createStore, compose, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 
-const rootReducer = combineReducers({});
+import auth from './auth'
+const rootReducer = combineReducers({
+    auth
+});
 
 let storeEnhancer;
 
 if (process.env.NODE_ENV !== "production") {
   const composeEnhancers =
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-  storeEnhancer = composeEnhancers(applyMiddleWare(thunk));
+  storeEnhancer = composeEnhancers(applyMiddleware(thunk));
 } else {
-  storeEnhancer = applyMiddleWare(thunk);
+  storeEnhancer = applyMiddleware(thunk);
 }
 
 export default function configureStore(initialState) {
