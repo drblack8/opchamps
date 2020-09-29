@@ -1,37 +1,33 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import { Provider } from "react-redux";
-import configureStore from './store/configureStore';
+import { BrowserRouter } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
-const store = configureStore();
-if (process.env.NODE_ENV !== 'production') {
-  window.store = store
-}
+import Pages from "./pages/Pages";
+import { setUser } from './store/auth';
+
 
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const loadUser = async () => {
       const res = await fetch("/api/session");
       if (res.ok) {
         res.formData = await res.json();
+        dispatch(setUser(res.formData.user))
       }
       setLoading(false);
     };
     loadUser();
-  }, []);
+  }, [dispatch]);
 
   if (loading) return null;
 
   return (
     <BrowserRouter>
-      <Provider store={store}>
-        <Route path="/">
-          <h1>My Home Page</h1>
-        </Route>
-      </Provider>
+        <Pages />
     </BrowserRouter>
   );
 }
