@@ -37,7 +37,6 @@ router.put(
             const token = await generateToken(user);
             res.cookie("token", token, {
                 maxAge: expiresIn * 1000,
-                httpOnly: true,
                 secure: process.env.NODE_ENV === "production",
             });
             return res.json({

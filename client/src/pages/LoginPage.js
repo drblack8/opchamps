@@ -1,30 +1,70 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { Redirect } from 'react-router-dom'
-import { login } from '../store/auth'
+import React from "react";
+import 'antd/dist/antd.css';
+import { Form, Input, Button } from "antd";
+import { useDispatch, useSelector } from "react-redux";
+import { Redirect } from "react-router-dom";
+import { login } from "../store/auth";
+
+const layout = {
+  labelCol: {
+    span: 8,
+  },
+  wrapperCol: {
+    span: 16,
+  },
+};
+const tailLayout = {
+  wrapperCol: {
+    offset: 8,
+    span: 16,
+  },
+};
 
 function LoginPage() {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-    const currentUserId = useSelector(state => state.auth.id);
-    const dispatch = useDispatch();
+  const [form] = Form.useForm();
+  const currentUserId = useSelector((state) => state.auth.id);
+  const dispatch = useDispatch();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        dispatch(login(username, password))
-    }
+  const onFinish = (values) => {
+    const { username, password } = values;
+    dispatch(login(username, password));
+  };
 
-    if (currentUserId) return <Redirect to="/" />
+  if (currentUserId) return <Redirect to="/" />;
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <label>Email or Username <input type="text" name="username" value={username} onChange={e => setUsername(e.target.value)} /> </label>
-
-            <label>Password <input type="text" name="password" value={password} onChange={e => setPassword(e.target.value)} /> </label>
-
-            <button type="submit">Log In</button>
-        </form>
-    )
+  return (
+    <Form {...layout} form={form} name="basic" onFinish={onFinish}>
+      <Form.Item
+        name="username"
+        label="Username"
+        rules={[
+          {
+            required: true,
+            message: "Enter your OPChamps Username",
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="password"
+        label="password"
+        rules={[
+          {
+            required: true,
+            message: "Password",
+          },
+        ]}
+      >
+        <Input.Password />
+      </Form.Item>
+      <Form.Item {...tailLayout}>
+        <Button type="primary" htmlType="submit">
+          Log In
+        </Button>
+      </Form.Item>
+    </Form>
+  );
 }
 
 export default LoginPage;

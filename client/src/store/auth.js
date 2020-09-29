@@ -18,6 +18,7 @@ export const login = (username, password) => {
       body: JSON.stringify({ username, password }),
     });
     const data = await res.json();
+    console.log(data);
     if (res.ok) {
       dispatch(setUser(data.user));
     }
@@ -25,9 +26,22 @@ export const login = (username, password) => {
   };
 };
 
+const loadUser = () => {
+  try {
+  const token = Cookies.get('token')
+  console.log('token thing:', token);
+  const payload = JSON.parse(atob(token.split('.')[1]))
+  const { data } = payload;
+  console.log('data:', data);
+  return data
+  } catch (e) {
+    return {}
+  }
+};
+
 window.login = login;
 
-export default function authReducer(state={}, action) {
+export default function authReducer(state=loadUser(), action) {
     switch (action.type) {
         case SET_USER:
                 return action.user;
