@@ -1,5 +1,5 @@
 const func = (obj) => {
-    return {"id":`${Object.values(obj)[1]}`,"key":`${Object.values(obj)[2]}`,"name":`${Object.values(obj)[1]}`,"title":`${Object.values(obj)[4]}`,"blurb":`${Object.values(obj)[5]}`,"image":`./${Object.values(obj)[1]}_0.jpg`}
+    return {"key":`${Object.values(obj)[2]}`,"name":`${Object.values(obj)[1]}`,"title":`${Object.values(obj)[4]}`,"blurb":`${Object.values(obj)[5]}`,"image":`./${Object.values(obj)[1]}_0.jpg`}
 }
 
 const func2 = (arr) => {

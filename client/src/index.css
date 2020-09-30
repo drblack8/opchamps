@@ -18,3 +18,24 @@
   .formz {
       margin-top: 15px;
   }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flex-container > div{
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .shadows {
+    border: 1px solid;
+
+    box-shadow: 5px 10px 18px #888888;
+  }
+
+  .champ-title {
+    text-align: center;
+    padding-top: 15px;
+    font-size: larger;
+  }

@@ -1,11 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Champions = sequelize.define('Champions', {
-    id: DataTypes.STRING,
     key: DataTypes.INTEGER,
     name: DataTypes.STRING,
     title: DataTypes.STRING,
-    blurb: DataTypes.TEXT,
+    blurb: DataTypes.STRING,
     image: DataTypes.STRING
   }, {});
   Champions.associate = function(models) {

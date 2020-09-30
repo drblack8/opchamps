@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "antd/dist/antd.css";
+import { Card, Image } from "antd";
 
-const Champion = () => {
+const Champions = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -10,12 +11,15 @@ const Champion = () => {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("https://api.example.com/items")
+    fetch("/api/champions")
       .then((res) => res.json())
       .then(
         (result) => {
+
+          const sum = {'items': [...result]}
+
           setIsLoaded(true);
-          setItems(result.items);
+          setItems(sum.items);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -33,15 +37,22 @@ const Champion = () => {
     return <div>Loading...</div>;
   } else {
     return (
-      <ul>
+      <div className="flex-container">
         {items.map((item) => (
-          <li key={item.name}>
-            {item.name} {item.price}
-          </li>
+          <div>
+          <Card style={{ width: 250 }}>
+          <div className="champ-tiles">
+              <Image className='shadows' width={200} src={require(`../../public/assets/${item.name}_0.jpg`)} />
+            <div className="champ-title">
+            {item.name} {item.title}
+            </div>
+          </div>
+          </Card>
+          </div>
         ))}
-      </ul>
+        </div>
     );
   }
 };
 
-export default Champion;
+export default Champions;

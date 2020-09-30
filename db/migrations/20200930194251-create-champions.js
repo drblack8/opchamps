@@ -4,8 +4,9 @@ module.exports = {
     return queryInterface.createTable('Champions', {
       id: {
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       key: {
         type: Sequelize.INTEGER

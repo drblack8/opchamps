@@ -4,7 +4,6 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Champions', [
       {
-        id: 'Aatrox',
         key: '266',
         name: 'Aatrox',
         title: 'the Darkin Blade',
@@ -12,7 +11,6 @@ module.exports = {
         image: './Aatrox_0.jpg'
       },
       {
-        id: 'Ahri',
         key: '103',
         name: 'Ahri',
         title: 'the Nine-Tailed Fox',
@@ -20,7 +18,6 @@ module.exports = {
         image: './Ahri_0.jpg'
       },
       {
-        id: 'Akali',
         key: '84',
         name: 'Akali',
         title: 'the Rogue Assassin',
@@ -28,7 +25,6 @@ module.exports = {
         image: './Akali_0.jpg'
       },
       {
-        id: 'Alistar',
         key: '12',
         name: 'Alistar',
         title: 'the Minotaur',
@@ -36,7 +32,6 @@ module.exports = {
         image: './Alistar_0.jpg'
       },
       {
-        id: 'Amumu',
         key: '32',
         name: 'Amumu',
         title: 'the Sad Mummy',
@@ -44,7 +39,6 @@ module.exports = {
         image: './Amumu_0.jpg'
       },
       {
-        id: 'Anivia',
         key: '34',
         name: 'Anivia',
         title: 'the Cryophoenix',
@@ -52,7 +46,6 @@ module.exports = {
         image: './Anivia_0.jpg'
       },
       {
-        id: 'Annie',
         key: '1',
         name: 'Annie',
         title: 'the Dark Child',
@@ -60,7 +53,6 @@ module.exports = {
         image: './Annie_0.jpg'
       },
       {
-        id: 'Aphelios',
         key: '523',
         name: 'Aphelios',
         title: 'the Weapon of the Faithful',
@@ -68,7 +60,6 @@ module.exports = {
         image: './Aphelios_0.jpg'
       },
       {
-        id: 'Ashe',
         key: '22',
         name: 'Ashe',
         title: 'the Frost Archer',
@@ -76,7 +67,6 @@ module.exports = {
         image: './Ashe_0.jpg'
       },
       {
-        id: 'AurelionSol',
         key: '136',
         name: 'AurelionSol',
         title: 'The Star Forger',
@@ -84,7 +74,6 @@ module.exports = {
         image: './AurelionSol_0.jpg'
       },
       {
-        id: 'Azir',
         key: '268',
         name: 'Azir',
         title: 'the Emperor of the Sands',
@@ -92,7 +81,6 @@ module.exports = {
         image: './Azir_0.jpg'
       },
       {
-        id: 'Bard',
         key: '432',
         name: 'Bard',
         title: 'the Wandering Caretaker',
@@ -100,7 +88,6 @@ module.exports = {
         image: './Bard_0.jpg'
       },
       {
-        id: 'Blitzcrank',
         key: '53',
         name: 'Blitzcrank',
         title: 'the Great Steam Golem',
@@ -108,7 +95,6 @@ module.exports = {
         image: './Blitzcrank_0.jpg'
       },
       {
-        id: 'Brand',
         key: '63',
         name: 'Brand',
         title: 'the Burning Vengeance',
@@ -116,7 +102,6 @@ module.exports = {
         image: './Brand_0.jpg'
       },
       {
-        id: 'Braum',
         key: '201',
         name: 'Braum',
         title: 'the Heart of the Freljord',
@@ -124,7 +109,6 @@ module.exports = {
         image: './Braum_0.jpg'
       },
       {
-        id: 'Caitlyn',
         key: '51',
         name: 'Caitlyn',
         title: 'the Sheriff of Piltover',
@@ -132,7 +116,6 @@ module.exports = {
         image: './Caitlyn_0.jpg'
       },
       {
-        id: 'Camille',
         key: '164',
         name: 'Camille',
         title: 'the Steel Shadow',
@@ -140,7 +123,6 @@ module.exports = {
         image: './Camille_0.jpg'
       },
       {
-        id: 'Cassiopeia',
         key: '69',
         name: 'Cassiopeia',
         title: "the Serpent's Embrace",
@@ -148,7 +130,6 @@ module.exports = {
         image: './Cassiopeia_0.jpg'
       },
       {
-        id: 'Chogath',
         key: '31',
         name: 'Chogath',
         title: 'the Terror of the Void',
@@ -156,7 +137,6 @@ module.exports = {
         image: './Chogath_0.jpg'
       },
       {
-        id: 'Corki',
         key: '42',
         name: 'Corki',
         title: 'the Daring Bombardier',
@@ -164,7 +144,6 @@ module.exports = {
         image: './Corki_0.jpg'
       },
       {
-        id: 'Darius',
         key: '122',
         name: 'Darius',
         title: 'the Hand of Noxus',
@@ -172,7 +151,6 @@ module.exports = {
         image: './Darius_0.jpg'
       },
       {
-        id: 'Diana',
         key: '131',
         name: 'Diana',
         title: 'Scorn of the Moon',
@@ -180,7 +158,6 @@ module.exports = {
         image: './Diana_0.jpg'
       },
       {
-        id: 'Draven',
         key: '119',
         name: 'Draven',
         title: 'the Glorious Executioner',
@@ -188,7 +165,6 @@ module.exports = {
         image: './Draven_0.jpg'
       },
       {
-        id: 'DrMundo',
         key: '36',
         name: 'DrMundo',
         title: 'the Madman of Zaun',
@@ -196,7 +172,6 @@ module.exports = {
         image: './DrMundo_0.jpg'
       },
       {
-        id: 'Ekko',
         key: '245',
         name: 'Ekko',
         title: 'the Boy Who Shattered Time',
@@ -204,7 +179,6 @@ module.exports = {
         image: './Ekko_0.jpg'
       },
       {
-        id: 'Elise',
         key: '60',
         name: 'Elise',
         title: 'the Spider Queen',
@@ -212,7 +186,6 @@ module.exports = {
         image: './Elise_0.jpg'
       },
       {
-        id: 'Evelynn',
         key: '28',
         name: 'Evelynn',
         title: "Agony's Embrace",
@@ -220,7 +193,6 @@ module.exports = {
         image: './Evelynn_0.jpg'
       },
       {
-        id: 'Ezreal',
         key: '81',
         name: 'Ezreal',
         title: 'the Prodigal Explorer',
@@ -228,7 +200,6 @@ module.exports = {
         image: './Ezreal_0.jpg'
       },
       {
-        id: 'Fiddlesticks',
         key: '9',
         name: 'Fiddlesticks',
         title: 'the Ancient Fear',
@@ -236,7 +207,6 @@ module.exports = {
         image: './Fiddlesticks_0.jpg'
       },
       {
-        id: 'Fiora',
         key: '114',
         name: 'Fiora',
         title: 'the Grand Duelist',
@@ -244,7 +214,6 @@ module.exports = {
         image: './Fiora_0.jpg'
       },
       {
-        id: 'Fizz',
         key: '105',
         name: 'Fizz',
         title: 'the Tidal Trickster',
@@ -252,7 +221,6 @@ module.exports = {
         image: './Fizz_0.jpg'
       },
       {
-        id: 'Galio',
         key: '3',
         name: 'Galio',
         title: 'the Colossus',
@@ -260,7 +228,6 @@ module.exports = {
         image: './Galio_0.jpg'
       },
       {
-        id: 'Gangplank',
         key: '41',
         name: 'Gangplank',
         title: 'the Saltwater Scourge',
@@ -268,7 +235,6 @@ module.exports = {
         image: './Gangplank_0.jpg'
       },
       {
-        id: 'Garen',
         key: '86',
         name: 'Garen',
         title: 'The Might of Demacia',
@@ -276,7 +242,6 @@ module.exports = {
         image: './Garen_0.jpg'
       },
       {
-        id: 'Gnar',
         key: '150',
         name: 'Gnar',
         title: 'the Missing Link',
@@ -284,7 +249,6 @@ module.exports = {
         image: './Gnar_0.jpg'
       },
       {
-        id: 'Gragas',
         key: '79',
         name: 'Gragas',
         title: 'the Rabble Rouser',
@@ -292,7 +256,6 @@ module.exports = {
         image: './Gragas_0.jpg'
       },
       {
-        id: 'Graves',
         key: '104',
         name: 'Graves',
         title: 'the Outlaw',
@@ -300,7 +263,6 @@ module.exports = {
         image: './Graves_0.jpg'
       },
       {
-        id: 'Hecarim',
         key: '120',
         name: 'Hecarim',
         title: 'the Shadow of War',
@@ -308,7 +270,6 @@ module.exports = {
         image: './Hecarim_0.jpg'
       },
       {
-        id: 'Heimerdinger',
         key: '74',
         name: 'Heimerdinger',
         title: 'the Revered Inventor',
@@ -316,7 +277,6 @@ module.exports = {
         image: './Heimerdinger_0.jpg'
       },
       {
-        id: 'Illaoi',
         key: '420',
         name: 'Illaoi',
         title: 'the Kraken Priestess',
@@ -324,7 +284,6 @@ module.exports = {
         image: './Illaoi_0.jpg'
       },
       {
-        id: 'Irelia',
         key: '39',
         name: 'Irelia',
         title: 'the Blade Dancer',
@@ -332,7 +291,6 @@ module.exports = {
         image: './Irelia_0.jpg'
       },
       {
-        id: 'Ivern',
         key: '427',
         name: 'Ivern',
         title: 'the Green Father',
@@ -340,7 +298,6 @@ module.exports = {
         image: './Ivern_0.jpg'
       },
       {
-        id: 'Janna',
         key: '40',
         name: 'Janna',
         title: "the Storm's Fury",
@@ -348,7 +305,6 @@ module.exports = {
         image: './Janna_0.jpg'
       },
       {
-        id: 'JarvanIV',
         key: '59',
         name: 'JarvanIV',
         title: 'the Exemplar of Demacia',
@@ -356,7 +312,6 @@ module.exports = {
         image: './JarvanIV_0.jpg'
       },
       {
-        id: 'Jax',
         key: '24',
         name: 'Jax',
         title: 'Grandmaster at Arms',
@@ -364,7 +319,6 @@ module.exports = {
         image: './Jax_0.jpg'
       },
       {
-        id: 'Jayce',
         key: '126',
         name: 'Jayce',
         title: 'the Defender of Tomorrow',
@@ -372,7 +326,6 @@ module.exports = {
         image: './Jayce_0.jpg'
       },
       {
-        id: 'Jhin',
         key: '202',
         name: 'Jhin',
         title: 'the Virtuoso',
@@ -380,7 +333,6 @@ module.exports = {
         image: './Jhin_0.jpg'
       },
       {
-        id: 'Jinx',
         key: '222',
         name: 'Jinx',
         title: 'the Loose Cannon',
@@ -388,7 +340,6 @@ module.exports = {
         image: './Jinx_0.jpg'
       },
       {
-        id: 'Kaisa',
         key: '145',
         name: 'Kaisa',
         title: 'Daughter of the Void',
@@ -396,7 +347,6 @@ module.exports = {
         image: './Kaisa_0.jpg'
       },
       {
-        id: 'Kalista',
         key: '429',
         name: 'Kalista',
         title: 'the Spear of Vengeance',
@@ -404,7 +354,6 @@ module.exports = {
         image: './Kalista_0.jpg'
       },
       {
-        id: 'Karma',
         key: '43',
         name: 'Karma',
         title: 'the Enlightened One',
@@ -412,7 +361,6 @@ module.exports = {
         image: './Karma_0.jpg'
       },
       {
-        id: 'Karthus',
         key: '30',
         name: 'Karthus',
         title: 'the Deathsinger',
@@ -420,7 +368,6 @@ module.exports = {
         image: './Karthus_0.jpg'
       },
       {
-        id: 'Kassadin',
         key: '38',
         name: 'Kassadin',
         title: 'the Void Walker',
@@ -428,7 +375,6 @@ module.exports = {
         image: './Kassadin_0.jpg'
       },
       {
-        id: 'Katarina',
         key: '55',
         name: 'Katarina',
         title: 'the Sinister Blade',
@@ -436,7 +382,6 @@ module.exports = {
         image: './Katarina_0.jpg'
       },
       {
-        id: 'Kayle',
         key: '10',
         name: 'Kayle',
         title: 'the Righteous',
@@ -444,7 +389,6 @@ module.exports = {
         image: './Kayle_0.jpg'
       },
       {
-        id: 'Kayn',
         key: '141',
         name: 'Kayn',
         title: 'the Shadow Reaper',
@@ -452,7 +396,6 @@ module.exports = {
         image: './Kayn_0.jpg'
       },
       {
-        id: 'Kennen',
         key: '85',
         name: 'Kennen',
         title: 'the Heart of the Tempest',
@@ -460,7 +403,6 @@ module.exports = {
         image: './Kennen_0.jpg'
       },
       {
-        id: 'Khazix',
         key: '121',
         name: 'Khazix',
         title: 'the Voidreaver',
@@ -468,7 +410,6 @@ module.exports = {
         image: './Khazix_0.jpg'
       },
       {
-        id: 'Kindred',
         key: '203',
         name: 'Kindred',
         title: 'The Eternal Hunters',
@@ -476,7 +417,6 @@ module.exports = {
         image: './Kindred_0.jpg'
       },
       {
-        id: 'Kled',
         key: '240',
         name: 'Kled',
         title: 'the Cantankerous Cavalier',
@@ -484,7 +424,6 @@ module.exports = {
         image: './Kled_0.jpg'
       },
       {
-        id: 'KogMaw',
         key: '96',
         name: 'KogMaw',
         title: 'the Mouth of the Abyss',
@@ -492,7 +431,6 @@ module.exports = {
         image: './KogMaw_0.jpg'
       },
       {
-        id: 'Leblanc',
         key: '7',
         name: 'Leblanc',
         title: 'the Deceiver',
@@ -500,7 +438,6 @@ module.exports = {
         image: './Leblanc_0.jpg'
       },
       {
-        id: 'LeeSin',
         key: '64',
         name: 'LeeSin',
         title: 'the Blind Monk',
@@ -508,7 +445,6 @@ module.exports = {
         image: './LeeSin_0.jpg'
       },
       {
-        id: 'Leona',
         key: '89',
         name: 'Leona',
         title: 'the Radiant Dawn',
@@ -516,7 +452,6 @@ module.exports = {
         image: './Leona_0.jpg'
       },
       {
-        id: 'Lillia',
         key: '876',
         name: 'Lillia',
         title: 'the Bashful Bloom',
@@ -524,7 +459,6 @@ module.exports = {
         image: './Lillia_0.jpg'
       },
       {
-        id: 'Lissandra',
         key: '127',
         name: 'Lissandra',
         title: 'the Ice Witch',
@@ -532,7 +466,6 @@ module.exports = {
         image: './Lissandra_0.jpg'
       },
       {
-        id: 'Lucian',
         key: '236',
         name: 'Lucian',
         title: 'the Purifier',
@@ -540,7 +473,6 @@ module.exports = {
         image: './Lucian_0.jpg'
       },
       {
-        id: 'Lulu',
         key: '117',
         name: 'Lulu',
         title: 'the Fae Sorceress',
@@ -548,7 +480,6 @@ module.exports = {
         image: './Lulu_0.jpg'
       },
       {
-        id: 'Lux',
         key: '99',
         name: 'Lux',
         title: 'the Lady of Luminosity',
@@ -556,7 +487,6 @@ module.exports = {
         image: './Lux_0.jpg'
       },
       {
-        id: 'Malphite',
         key: '54',
         name: 'Malphite',
         title: 'Shard of the Monolith',
@@ -564,7 +494,6 @@ module.exports = {
         image: './Malphite_0.jpg'
       },
       {
-        id: 'Malzahar',
         key: '90',
         name: 'Malzahar',
         title: 'the Prophet of the Void',
@@ -572,7 +501,6 @@ module.exports = {
         image: './Malzahar_0.jpg'
       },
       {
-        id: 'Maokai',
         key: '57',
         name: 'Maokai',
         title: 'the Twisted Treant',
@@ -580,7 +508,6 @@ module.exports = {
         image: './Maokai_0.jpg'
       },
       {
-        id: 'MasterYi',
         key: '11',
         name: 'MasterYi',
         title: 'the Wuju Bladesman',
@@ -588,7 +515,6 @@ module.exports = {
         image: './MasterYi_0.jpg'
       },
       {
-        id: 'MissFortune',
         key: '21',
         name: 'MissFortune',
         title: 'the Bounty Hunter',
@@ -596,7 +522,6 @@ module.exports = {
         image: './MissFortune_0.jpg'
       },
       {
-        id: 'MonkeyKing',
         key: '62',
         name: 'MonkeyKing',
         title: 'the Monkey King',
@@ -604,7 +529,6 @@ module.exports = {
         image: './MonkeyKing_0.jpg'
       },
       {
-        id: 'Mordekaiser',
         key: '82',
         name: 'Mordekaiser',
         title: 'the Iron Revenant',
@@ -612,7 +536,6 @@ module.exports = {
         image: './Mordekaiser_0.jpg'
       },
       {
-        id: 'Morgana',
         key: '25',
         name: 'Morgana',
         title: 'the Fallen',
@@ -620,7 +543,6 @@ module.exports = {
         image: './Morgana_0.jpg'
       },
       {
-        id: 'Nami',
         key: '267',
         name: 'Nami',
         title: 'the Tidecaller',
@@ -628,7 +550,6 @@ module.exports = {
         image: './Nami_0.jpg'
       },
       {
-        id: 'Nasus',
         key: '75',
         name: 'Nasus',
         title: 'the Curator of the Sands',
@@ -636,7 +557,6 @@ module.exports = {
         image: './Nasus_0.jpg'
       },
       {
-        id: 'Nautilus',
         key: '111',
         name: 'Nautilus',
         title: 'the Titan of the Depths',
@@ -644,7 +564,6 @@ module.exports = {
         image: './Nautilus_0.jpg'
       },
       {
-        id: 'Neeko',
         key: '518',
         name: 'Neeko',
         title: 'the Curious Chameleon',
@@ -652,7 +571,6 @@ module.exports = {
         image: './Neeko_0.jpg'
       },
       {
-        id: 'Nidalee',
         key: '76',
         name: 'Nidalee',
         title: 'the Bestial Huntress',
@@ -660,7 +578,6 @@ module.exports = {
         image: './Nidalee_0.jpg'
       },
       {
-        id: 'Nocturne',
         key: '56',
         name: 'Nocturne',
         title: 'the Eternal Nightmare',
@@ -668,7 +585,6 @@ module.exports = {
         image: './Nocturne_0.jpg'
       },
       {
-        id: 'Nunu',
         key: '20',
         name: 'Nunu',
         title: 'the Boy and His Yeti',
@@ -676,7 +592,6 @@ module.exports = {
         image: './Nunu_0.jpg'
       },
       {
-        id: 'Olaf',
         key: '2',
         name: 'Olaf',
         title: 'the Berserker',
@@ -684,7 +599,6 @@ module.exports = {
         image: './Olaf_0.jpg'
       },
       {
-        id: 'Orianna',
         key: '61',
         name: 'Orianna',
         title: 'the Lady of Clockwork',
@@ -692,7 +606,6 @@ module.exports = {
         image: './Orianna_0.jpg'
       },
       {
-        id: 'Ornn',
         key: '516',
         name: 'Ornn',
         title: 'The Fire below the Mountain',
@@ -700,7 +613,6 @@ module.exports = {
         image: './Ornn_0.jpg'
       },
       {
-        id: 'Pantheon',
         key: '80',
         name: 'Pantheon',
         title: 'the Unbreakable Spear',
@@ -708,7 +620,6 @@ module.exports = {
         image: './Pantheon_0.jpg'
       },
       {
-        id: 'Poppy',
         key: '78',
         name: 'Poppy',
         title: 'Keeper of the Hammer',
@@ -716,7 +627,6 @@ module.exports = {
         image: './Poppy_0.jpg'
       },
       {
-        id: 'Pyke',
         key: '555',
         name: 'Pyke',
         title: 'the Bloodharbor Ripper',
@@ -724,7 +634,6 @@ module.exports = {
         image: './Pyke_0.jpg'
       },
       {
-        id: 'Qiyana',
         key: '246',
         name: 'Qiyana',
         title: 'Empress of the Elements',
@@ -732,7 +641,6 @@ module.exports = {
         image: './Qiyana_0.jpg'
       },
       {
-        id: 'Quinn',
         key: '133',
         name: 'Quinn',
         title: "Demacia's Wings",
@@ -740,7 +648,6 @@ module.exports = {
         image: './Quinn_0.jpg'
       },
       {
-        id: 'Rakan',
         key: '497',
         name: 'Rakan',
         title: 'The Charmer',
@@ -748,7 +655,6 @@ module.exports = {
         image: './Rakan_0.jpg'
       },
       {
-        id: 'Rammus',
         key: '33',
         name: 'Rammus',
         title: 'the Armordillo',
@@ -756,7 +662,6 @@ module.exports = {
         image: './Rammus_0.jpg'
       },
       {
-        id: 'RekSai',
         key: '421',
         name: 'RekSai',
         title: 'the Void Burrower',
@@ -764,7 +669,6 @@ module.exports = {
         image: './RekSai_0.jpg'
       },
       {
-        id: 'Renekton',
         key: '58',
         name: 'Renekton',
         title: 'the Butcher of the Sands',
@@ -772,7 +676,6 @@ module.exports = {
         image: './Renekton_0.jpg'
       },
       {
-        id: 'Rengar',
         key: '107',
         name: 'Rengar',
         title: 'the Pridestalker',
@@ -780,7 +683,6 @@ module.exports = {
         image: './Rengar_0.jpg'
       },
       {
-        id: 'Riven',
         key: '92',
         name: 'Riven',
         title: 'the Exile',
@@ -788,7 +690,6 @@ module.exports = {
         image: './Riven_0.jpg'
       },
       {
-        id: 'Rumble',
         key: '68',
         name: 'Rumble',
         title: 'the Mechanized Menace',
@@ -796,7 +697,6 @@ module.exports = {
         image: './Rumble_0.jpg'
       },
       {
-        id: 'Ryze',
         key: '13',
         name: 'Ryze',
         title: 'the Rune Mage',
@@ -804,7 +704,6 @@ module.exports = {
         image: './Ryze_0.jpg'
       },
       {
-        id: 'Samira',
         key: '360',
         name: 'Samira',
         title: 'the Desert Rose',
@@ -812,7 +711,6 @@ module.exports = {
         image: './Samira_0.jpg'
       },
       {
-        id: 'Sejuani',
         key: '113',
         name: 'Sejuani',
         title: 'Fury of the North',
@@ -820,7 +718,6 @@ module.exports = {
         image: './Sejuani_0.jpg'
       },
       {
-        id: 'Senna',
         key: '235',
         name: 'Senna',
         title: 'the Redeemer',
@@ -828,7 +725,6 @@ module.exports = {
         image: './Senna_0.jpg'
       },
       {
-        id: 'Sett',
         key: '875',
         name: 'Sett',
         title: 'the Boss',
@@ -836,7 +732,6 @@ module.exports = {
         image: './Sett_0.jpg'
       },
       {
-        id: 'Shaco',
         key: '35',
         name: 'Shaco',
         title: 'the Demon Jester',
@@ -844,7 +739,6 @@ module.exports = {
         image: './Shaco_0.jpg'
       },
       {
-        id: 'Shen',
         key: '98',
         name: 'Shen',
         title: 'the Eye of Twilight',
@@ -852,7 +746,6 @@ module.exports = {
         image: './Shen_0.jpg'
       },
       {
-        id: 'Shyvana',
         key: '102',
         name: 'Shyvana',
         title: 'the Half-Dragon',
@@ -860,7 +753,6 @@ module.exports = {
         image: './Shyvana_0.jpg'
       },
       {
-        id: 'Singed',
         key: '27',
         name: 'Singed',
         title: 'the Mad Chemist',
@@ -868,7 +760,6 @@ module.exports = {
         image: './Singed_0.jpg'
       },
       {
-        id: 'Sion',
         key: '14',
         name: 'Sion',
         title: 'The Undead Juggernaut',
@@ -876,7 +767,6 @@ module.exports = {
         image: './Sion_0.jpg'
       },
       {
-        id: 'Sivir',
         key: '15',
         name: 'Sivir',
         title: 'the Battle Mistress',
@@ -884,7 +774,6 @@ module.exports = {
         image: './Sivir_0.jpg'
       },
       {
-        id: 'Skarner',
         key: '72',
         name: 'Skarner',
         title: 'the Crystal Vanguard',
@@ -892,7 +781,6 @@ module.exports = {
         image: './Skarner_0.jpg'
       },
       {
-        id: 'Sona',
         key: '37',
         name: 'Sona',
         title: 'Maven of the Strings',
@@ -900,7 +788,6 @@ module.exports = {
         image: './Sona_0.jpg'
       },
       {
-        id: 'Soraka',
         key: '16',
         name: 'Soraka',
         title: 'the Starchild',
@@ -908,7 +795,6 @@ module.exports = {
         image: './Soraka_0.jpg'
       },
       {
-        id: 'Swain',
         key: '50',
         name: 'Swain',
         title: 'the Noxian Grand General',
@@ -916,7 +802,6 @@ module.exports = {
         image: './Swain_0.jpg'
       },
       {
-        id: 'Sylas',
         key: '517',
         name: 'Sylas',
         title: 'the Unshackled',
@@ -924,7 +809,6 @@ module.exports = {
         image: './Sylas_0.jpg'
       },
       {
-        id: 'Syndra',
         key: '134',
         name: 'Syndra',
         title: 'the Dark Sovereign',
@@ -932,7 +816,6 @@ module.exports = {
         image: './Syndra_0.jpg'
       },
       {
-        id: 'TahmKench',
         key: '223',
         name: 'TahmKench',
         title: 'the River King',
@@ -940,7 +823,6 @@ module.exports = {
         image: './TahmKench_0.jpg'
       },
       {
-        id: 'Taliyah',
         key: '163',
         name: 'Taliyah',
         title: 'the Stoneweaver',
@@ -948,7 +830,6 @@ module.exports = {
         image: './Taliyah_0.jpg'
       },
       {
-        id: 'Talon',
         key: '91',
         name: 'Talon',
         title: "the Blade's Shadow",
@@ -956,7 +837,6 @@ module.exports = {
         image: './Talon_0.jpg'
       },
       {
-        id: 'Taric',
         key: '44',
         name: 'Taric',
         title: 'the Shield of Valoran',
@@ -964,7 +844,6 @@ module.exports = {
         image: './Taric_0.jpg'
       },
       {
-        id: 'Teemo',
         key: '17',
         name: 'Teemo',
         title: 'the Swift Scout',
@@ -972,7 +851,6 @@ module.exports = {
         image: './Teemo_0.jpg'
       },
       {
-        id: 'Thresh',
         key: '412',
         name: 'Thresh',
         title: 'the Chain Warden',
@@ -980,7 +858,6 @@ module.exports = {
         image: './Thresh_0.jpg'
       },
       {
-        id: 'Tristana',
         key: '18',
         name: 'Tristana',
         title: 'the Yordle Gunner',
@@ -988,7 +865,6 @@ module.exports = {
         image: './Tristana_0.jpg'
       },
       {
-        id: 'Trundle',
         key: '48',
         name: 'Trundle',
         title: 'the Troll King',
@@ -996,7 +872,6 @@ module.exports = {
         image: './Trundle_0.jpg'
       },
       {
-        id: 'Tryndamere',
         key: '23',
         name: 'Tryndamere',
         title: 'the Barbarian King',
@@ -1004,7 +879,6 @@ module.exports = {
         image: './Tryndamere_0.jpg'
       },
       {
-        id: 'TwistedFate',
         key: '4',
         name: 'TwistedFate',
         title: 'the Card Master',
@@ -1012,7 +886,6 @@ module.exports = {
         image: './TwistedFate_0.jpg'
       },
       {
-        id: 'Twitch',
         key: '29',
         name: 'Twitch',
         title: 'the Plague Rat',
@@ -1020,7 +893,6 @@ module.exports = {
         image: './Twitch_0.jpg'
       },
       {
-        id: 'Udyr',
         key: '77',
         name: 'Udyr',
         title: 'the Spirit Walker',
@@ -1028,7 +900,6 @@ module.exports = {
         image: './Udyr_0.jpg'
       },
       {
-        id: 'Urgot',
         key: '6',
         name: 'Urgot',
         title: 'the Dreadnought',
@@ -1036,7 +907,6 @@ module.exports = {
         image: './Urgot_0.jpg'
       },
       {
-        id: 'Varus',
         key: '110',
         name: 'Varus',
         title: 'the Arrow of Retribution',
@@ -1044,7 +914,6 @@ module.exports = {
         image: './Varus_0.jpg'
       },
       {
-        id: 'Vayne',
         key: '67',
         name: 'Vayne',
         title: 'the Night Hunter',
@@ -1052,7 +921,6 @@ module.exports = {
         image: './Vayne_0.jpg'
       },
       {
-        id: 'Veigar',
         key: '45',
         name: 'Veigar',
         title: 'the Tiny Master of Evil',
@@ -1060,7 +928,6 @@ module.exports = {
         image: './Veigar_0.jpg'
       },
       {
-        id: 'Velkoz',
         key: '161',
         name: 'Velkoz',
         title: 'the Eye of the Void',
@@ -1068,7 +935,6 @@ module.exports = {
         image: './Velkoz_0.jpg'
       },
       {
-        id: 'Vi',
         key: '254',
         name: 'Vi',
         title: 'the Piltover Enforcer',
@@ -1076,7 +942,6 @@ module.exports = {
         image: './Vi_0.jpg'
       },
       {
-        id: 'Viktor',
         key: '112',
         name: 'Viktor',
         title: 'the Machine Herald',
@@ -1084,7 +949,6 @@ module.exports = {
         image: './Viktor_0.jpg'
       },
       {
-        id: 'Vladimir',
         key: '8',
         name: 'Vladimir',
         title: 'the Crimson Reaper',
@@ -1092,7 +956,6 @@ module.exports = {
         image: './Vladimir_0.jpg'
       },
       {
-        id: 'Volibear',
         key: '106',
         name: 'Volibear',
         title: 'the Relentless Storm',
@@ -1100,7 +963,6 @@ module.exports = {
         image: './Volibear_0.jpg'
       },
       {
-        id: 'Warwick',
         key: '19',
         name: 'Warwick',
         title: 'the Uncaged Wrath of Zaun',
@@ -1108,7 +970,6 @@ module.exports = {
         image: './Warwick_0.jpg'
       },
       {
-        id: 'Xayah',
         key: '498',
         name: 'Xayah',
         title: 'the Rebel',
@@ -1116,7 +977,6 @@ module.exports = {
         image: './Xayah_0.jpg'
       },
       {
-        id: 'Xerath',
         key: '101',
         name: 'Xerath',
         title: 'the Magus Ascendant',
@@ -1124,7 +984,6 @@ module.exports = {
         image: './Xerath_0.jpg'
       },
       {
-        id: 'XinZhao',
         key: '5',
         name: 'XinZhao',
         title: 'the Seneschal of Demacia',
@@ -1132,7 +991,6 @@ module.exports = {
         image: './XinZhao_0.jpg'
       },
       {
-        id: 'Yasuo',
         key: '157',
         name: 'Yasuo',
         title: 'the Unforgiven',
@@ -1140,7 +998,6 @@ module.exports = {
         image: './Yasuo_0.jpg'
       },
       {
-        id: 'Yone',
         key: '777',
         name: 'Yone',
         title: 'the Unforgotten',
@@ -1148,7 +1005,6 @@ module.exports = {
         image: './Yone_0.jpg'
       },
       {
-        id: 'Yorick',
         key: '83',
         name: 'Yorick',
         title: 'Shepherd of Souls',
@@ -1156,7 +1012,6 @@ module.exports = {
         image: './Yorick_0.jpg'
       },
       {
-        id: 'Yuumi',
         key: '350',
         name: 'Yuumi',
         title: 'the Magical Cat',
@@ -1164,7 +1019,6 @@ module.exports = {
         image: './Yuumi_0.jpg'
       },
       {
-        id: 'Zac',
         key: '154',
         name: 'Zac',
         title: 'the Secret Weapon',
@@ -1172,7 +1026,6 @@ module.exports = {
         image: './Zac_0.jpg'
       },
       {
-        id: 'Zed',
         key: '238',
         name: 'Zed',
         title: 'the Master of Shadows',
@@ -1180,7 +1033,6 @@ module.exports = {
         image: './Zed_0.jpg'
       },
       {
-        id: 'Ziggs',
         key: '115',
         name: 'Ziggs',
         title: 'the Hexplosives Expert',
@@ -1188,7 +1040,6 @@ module.exports = {
         image: './Ziggs_0.jpg'
       },
       {
-        id: 'Zilean',
         key: '26',
         name: 'Zilean',
         title: 'the Chronokeeper',
@@ -1196,7 +1047,6 @@ module.exports = {
         image: './Zilean_0.jpg'
       },
       {
-        id: 'Zoe',
         key: '142',
         name: 'Zoe',
         title: 'the Aspect of Twilight',
@@ -1204,7 +1054,6 @@ module.exports = {
         image: './Zoe_0.jpg'
       },
       {
-        id: 'Zyra',
         key: '143',
         name: 'Zyra',
         title: 'Rise of the Thorns',
