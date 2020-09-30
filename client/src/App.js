@@ -6,6 +6,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import { DingtalkOutlined, CrownOutlined, SettingOutlined } from '@ant-design/icons';
 
 import LogCard from "./pages/LogCard";
+import Champion from "./components/Champions";
 
 
 const { SubMenu } = Menu;
@@ -21,7 +22,7 @@ function App() {
       <div className="logo" />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
           <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
-          <Menu.Item key="2">Champions</Menu.Item>
+          <Menu.Item key="2"><Link to="/champs">Champions</Link></Menu.Item>
           <Menu.Item key="3">Items</Menu.Item>
           <Menu.Item key="4" style={{float: 'right'}}><Link to="/login">Log In</Link></Menu.Item>
       </Menu>
@@ -62,6 +63,7 @@ function App() {
           <div style={{ padding: 24, background: "#fff", minHeight: 360 }}>
             <Switch>
               <Route path="/login"><div className="log-card" style={{ textAlign: "center" }}><LogCard /></div></Route>
+              <Route path="/champs"><div><Champion /></div></Route>
             </Switch>
           </div>
         </Content>
