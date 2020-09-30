@@ -23,6 +23,9 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
+      pos: {
+        type: Sequelize.STRING
+      },
     });
   },
   down: (queryInterface, Sequelize) => {

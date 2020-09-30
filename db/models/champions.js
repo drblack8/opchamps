@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     title: DataTypes.STRING,
     blurb: DataTypes.STRING,
-    image: DataTypes.STRING
+    image: DataTypes.STRING,
+    pos: DataTypes.STRING
   }, {});
   Champions.associate = function(models) {
     // associations can be defined here
