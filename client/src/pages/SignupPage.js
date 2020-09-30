@@ -20,7 +20,7 @@ const tailLayout = {
   },
 };
 
-function LoginPage() {
+function SignupPage() {
   const [form] = Form.useForm();
   const currentUserId = useSelector((state) => state.auth.id);
   const dispatch = useDispatch();
@@ -34,6 +34,18 @@ function LoginPage() {
 
   return (
     <Form {...layout} form={form} name="basic" onFinish={onFinish}>
+        <Form.Item
+        name="email"
+        label="Email"
+        rules={[
+          {
+            required: true,
+            message: "Enter your Email",
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
       <Form.Item
         name="username"
         label="Username"
@@ -57,14 +69,26 @@ function LoginPage() {
         ]}
       >
         <Input.Password />
+        </Form.Item>
+        <Form.Item
+        name="confirmPassword"
+        label="Confirm"
+        rules={[
+          {
+            required: true,
+            message: "Confirm Password",
+          },
+        ]}
+      >
+        <Input.Password />
       </Form.Item>
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
-          Log In
+          Sign Up
         </Button>
       </Form.Item>
     </Form>
   );
 }
 
-export default LoginPage;
+export default SignupPage;
