@@ -26,6 +26,24 @@ export const login = (username, password) => {
   };
 };
 
+// export const login = (email, username, password) => {
+//   return async (dispatch) => {
+//     const res = await fetch("api/session", {
+//       method: "put",
+//       headers: {
+//         "Content-Type": "application/json",
+//         "XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
+//       },
+//       body: JSON.stringify({ username, password }),
+//     });
+//     const data = await res.json();
+//     console.log(data);
+//     if (res.ok) {
+//       dispatch(setUser(data.user));
+//     }
+//     return res;
+//   };
+// };
 const loadUser = () => {
   try {
   const token = Cookies.get('token')

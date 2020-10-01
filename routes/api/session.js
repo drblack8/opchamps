@@ -8,6 +8,9 @@ const { requireUser, generateToken, AuthenticationError } = require('../util/aut
 const { jwtConfig: { expiresIn }} = require('../../config')
 
 const router = express.Router();
+const TeemoJS = require('teemojs');
+
+let api = TeemoJS(process.env.RIOT_API, TeemoJS.championGGConfig);
 
 const validateLogin = [
     check("username").exists(),
@@ -18,6 +21,7 @@ router.get(
     "/",
     requireUser,
     asyncHandler(async function (req, res, next) {
+        console.log('asdfjkhasdlfkjahsdf');
         if (req.user) {
             return res.json({
                 user: req.user
@@ -32,6 +36,7 @@ router.put(
     validateLogin,
     handleValidationErrors,
     asyncHandler(async  function (req, res, next) {
+        //add user to database prior to logging in
         const user = await User.login(req.body);
         if (user) {
             const token = await generateToken(user);

@@ -28,13 +28,14 @@ function App() {
     window.location.reload(false);
     delete_cookie(cookie_key);
   }
+  let keys = ['1']
 
   return (
   <BrowserRouter>
     <Layout>
     <Header className="header">
       <img className="logo" src={logo} alt='logo' />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}  >
           <Menu.Item key="1"><Link to="/home">Home</Link></Menu.Item>
           <Menu.Item key="2"><Link to="/champs">Champions</Link></Menu.Item>
           <Menu.Item key="3">Items</Menu.Item>
@@ -51,6 +52,7 @@ function App() {
           <Menu
             mode="inline"
             defaultSelectedKeys={['0']}
+
             defaultOpenKeys={['sub1']}
             style={{ height: '100%' }}
           >
@@ -86,6 +88,7 @@ function App() {
               <Route path="/mid"><div><Mid /></div></Route>
               <Route path="/adc"><div><Adc /></div></Route>
               <Route path="/sup"><div><Sup /></div></Route>
+              <Route path="/"><div><Home /></div></Route>
             </Switch>
           </div>
         </Content>
