@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { login } from "../store/auth";
 
+
 const layout = {
   labelCol: {
     span: 8,
@@ -26,7 +27,8 @@ function SignupPage() {
   const dispatch = useDispatch();
 
   const onFinish = (values) => {
-    const { username, password } = values;
+    const { email, username, password } = values;
+
     dispatch(login(username, password));
   };
 
