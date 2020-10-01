@@ -26,6 +26,12 @@ module.exports = {
       pos: {
         type: Sequelize.STRING
       },
+      reg: {
+        type: Sequelize.STRING
+      },
+      lore: {
+        type: Sequelize.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
