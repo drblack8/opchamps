@@ -169,7 +169,7 @@ module.exports = {
         title: 'the Hand of Noxus',
         blurb: "There is no greater symbol of Noxian might than Darius, the nation's most feared and battle-hardened commander. Rising from humble origins to become the Hand of Noxus, he cleaves through the empire's enemies—many of them Noxians themselves. Knowing that...",
         image: './Darius_0.jpg',
-        pos: 'mid'
+        pos: 'top'
       },
       {
         key: '131',
@@ -177,7 +177,7 @@ module.exports = {
         title: 'Scorn of the Moon',
         blurb: "Bearing her crescent moonblade, Diana fights as a warrior of the Lunari—a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, she is a living embodiment of the silver moon's power. Imbued...",
         image: './Diana_0.jpg',
-        pos: 'top'
+        pos: 'mid'
       },
       {
         key: '119',

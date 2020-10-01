@@ -2,24 +2,23 @@ import React, { useEffect, useState } from "react";
 import "antd/dist/antd.css";
 import { Card, Image } from "antd";
 
-const Champions = () => {
+const Jg = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
+  const [jg, setJg] = useState([]);
 
   // Note: the empty deps array [] means
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("/api/champions")
+    fetch("/api/champions/jg")
       .then((res) => res.json())
       .then(
         (result) => {
-
-          const sum = {'items': [...result]}
+          const sum = {'jg': [...result]}
 
           setIsLoaded(true);
-          setItems(sum.items);
+          setJg(sum.jg);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -38,13 +37,13 @@ const Champions = () => {
   } else {
     return (
       <div className="flex-container">
-        {items.map((item) => (
-          <div key={item.key}>
+        {jg.map((e) => (
+          <div key={e.key}>
           <Card style={{ width: 250 }}>
           <div className="champ-tiles">
-              <Image className='shadows' width={200} src={require(`../../public/assets/${item.name}_0.jpg`)} />
+              <Image className='shadows' width={200} src={require(`../../public/assets/${e.name}_0.jpg`)} />
             <div className="champ-title">
-            {item.name} {item.title}
+            {e.name} {e.title}
             </div>
           </div>
           </Card>
@@ -55,4 +54,4 @@ const Champions = () => {
   }
 };
 
-export default Champions;
+export default Jg;
