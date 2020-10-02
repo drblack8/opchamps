@@ -6,6 +6,10 @@ async function list() {
     })
 }
 
+async function one(id) {
+    return await Champions.findByPk(id)
+}
+
 async function top() {
     return await Champions.findAll({
         where: {
@@ -42,4 +46,4 @@ async function sup() {
         }
     })
 }
-module.exports = { list, top, jg, mid, adc, sup }
+module.exports = { list, one, top, jg, mid, adc, sup }

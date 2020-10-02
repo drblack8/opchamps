@@ -24,13 +24,11 @@
     "helmet": "^3.22.0",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^8.5.1",
-    "lol-riot-api": "^3.0.2",
     "morgan": "~1.9.1",
     "per-env": "^1.0.2",
     "pg": "^8.0.3",
     "sequelize": "^5.21.7",
     "sequelize-cli": "^5.5.1",
-    "teemojs": "^1.6.1",
     "uuid": "^8.0.0"
   },
   "devDependencies": {

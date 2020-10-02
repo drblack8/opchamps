@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "antd/dist/antd.css";
 import { Card, Image } from "antd";
+import { NavLink } from "react-router-dom";
 
 const Jg = () => {
   const [error, setError] = useState(null);
@@ -15,7 +16,7 @@ const Jg = () => {
       .then((res) => res.json())
       .then(
         (result) => {
-          const sum = {'jg': [...result]}
+          const sum = { jg: [...result] };
 
           setIsLoaded(true);
           setJg(sum.jg);
@@ -38,18 +39,26 @@ const Jg = () => {
     return (
       <div className="flex-container">
         {jg.map((e) => (
-          <div key={e.key}>
-          <Card style={{ width: 250 }}>
-          <div className="champ-tiles">
-              <Image className='shadows' width={200} src={require(`../../public/assets/${e.name}_0.jpg`)} />
-            <div className="champ-title">
-            {e.name} {e.title}
+          <React.Fragment key={e.id}>
+            <div>
+              <NavLink to={`/champions/${e.id}`} key={e.id}>
+                <Card style={{ width: 250 }}>
+                  <div className="champ-tiles">
+                    <Image
+                      className="shadows"
+                      width={200}
+                      src={require(`../../public/assets/icons/${e.name}_0.jpg`)}
+                    />
+                    <div className="champ-title">
+                      {e.name} {e.title}
+                    </div>
+                  </div>
+                </Card>
+              </NavLink>
             </div>
-          </div>
-          </Card>
-          </div>
+          </React.Fragment>
         ))}
-        </div>
+      </div>
     );
   }
 };

@@ -15,6 +15,7 @@ import Adc from "./components/Adc";
 import Sup from "./components/Sup";
 import { useSelector } from "react-redux";
 import Home from "./components/Home";
+import Champion from "./components/Champion";
 
 
 const { SubMenu } = Menu;
@@ -28,7 +29,6 @@ function App() {
     window.location.reload(false);
     delete_cookie(cookie_key);
   }
-  let keys = ['1']
 
   return (
   <BrowserRouter>
@@ -82,6 +82,7 @@ function App() {
             <Switch>
               <Route path="/home"><div><Home /></div></Route>
               <Route path="/login"><div className="log-card" style={{ textAlign: "center" }}><LogCard /></div></Route>
+              <Route path="/champions/:id" component={Champion}></Route>
               <Route path="/champs"><div><Champions /></div></Route>
               <Route path="/top"><div><Top /></div></Route>
               <Route path="/jg"><div><Jg /></div></Route>

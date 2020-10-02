@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "antd/dist/antd.css";
 import { Card, Image } from "antd";
+import { NavLink } from "react-router-dom";
 
 const Sup = () => {
   const [error, setError] = useState(null);
@@ -15,8 +16,8 @@ const Sup = () => {
       .then((res) => res.json())
       .then(
         (result) => {
-            console.log('Sup stuff: ', result);
-          const sum = {'sups': [...result]}
+          console.log("Sup stuff: ", result);
+          const sum = { sups: [...result] };
 
           setIsLoaded(true);
           setSups(sum.sups);
@@ -39,18 +40,26 @@ const Sup = () => {
     return (
       <div className="flex-container">
         {sups.map((sup) => (
-          <div key={sup.key}>
-          <Card style={{ width: 250 }}>
-          <div className="champ-tiles">
-              <Image className='shadows' width={200} src={require(`../../public/assets/${sup.name}_0.jpg`)} />
-            <div className="champ-title">
-            {sup.name} {sup.title}
+          <React.Fragment key={sup.id}>
+            <div>
+              <NavLink to={`/champions/${sup.id}`} key={sup.id}>
+                <Card style={{ width: 250 }}>
+                  <div className="champ-tiles">
+                    <Image
+                      className="shadows"
+                      width={200}
+                      src={require(`../../public/assets/icons/${sup.name}_0.jpg`)}
+                    />
+                    <div className="champ-title">
+                      {sup.name} {sup.title}
+                    </div>
+                  </div>
+                </Card>
+              </NavLink>
             </div>
-          </div>
-          </Card>
-          </div>
+          </React.Fragment>
         ))}
-        </div>
+      </div>
     );
   }
 };

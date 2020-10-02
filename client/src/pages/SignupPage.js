@@ -27,7 +27,7 @@ function SignupPage() {
   const dispatch = useDispatch();
 
   const onFinish = (values) => {
-    const { email, username, password } = values;
+    const { username, password } = values;
 
     dispatch(login(username, password));
   };

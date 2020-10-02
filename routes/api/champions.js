@@ -4,6 +4,14 @@ const asyncHandler = require("express-async-handler");
 const championRepository = require("../../db/champions-repo");
 
 router.get(
+  "/banana/:id",
+  asyncHandler(async (req, res) => {
+    const champion = await championRepository.one(req.params.id)
+    res.json(champion)
+  })
+)
+
+router.get(
   "/",
   asyncHandler(async (req, res) => {
     const champion = await championRepository.list();
@@ -25,6 +33,8 @@ router.get(
     res.json(champion);
   })
 );
+
+
 
 router.get(
   "/mid",

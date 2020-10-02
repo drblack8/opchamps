@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "antd/dist/antd.css";
 import { Card, Image } from "antd";
+import { NavLink } from "react-router-dom";
 
 const Mid = () => {
   const [error, setError] = useState(null);
@@ -15,8 +16,8 @@ const Mid = () => {
       .then((res) => res.json())
       .then(
         (result) => {
-            console.log('Mid stuff: ', result);
-          const sum = {'mids': [...result]}
+          console.log("Mid stuff: ", result);
+          const sum = { mids: [...result] };
 
           setIsLoaded(true);
           setMids(sum.mids);
@@ -39,18 +40,26 @@ const Mid = () => {
     return (
       <div className="flex-container">
         {mids.map((mid) => (
-          <div key={mid.key}>
-          <Card style={{ width: 250 }}>
-          <div className="champ-tiles">
-              <Image className='shadows' width={200} src={require(`../../public/assets/${mid.name}_0.jpg`)} />
-            <div className="champ-title">
-            {mid.name} {mid.title}
+          <React.Fragment key={mid.id}>
+            <div>
+              <NavLink to={`/champions/${mid.id}`} key={mid.id}>
+                <Card style={{ width: 250 }}>
+                  <div className="champ-tiles">
+                    <Image
+                      className="shadows"
+                      width={200}
+                      src={require(`../../public/assets/icons/${mid.name}_0.jpg`)}
+                    />
+                    <div className="champ-title">
+                      {mid.name} {mid.title}
+                    </div>
+                  </div>
+                </Card>
+              </NavLink>
             </div>
-          </div>
-          </Card>
-          </div>
+          </React.Fragment>
         ))}
-        </div>
+      </div>
     );
   }
 };
