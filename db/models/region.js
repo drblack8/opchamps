@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const Region = sequelize.define('Region', {
     title: {
-      type: DataTypes.string,
+      type: DataTypes.STRING,
       allowNull: false
     },
     key: {

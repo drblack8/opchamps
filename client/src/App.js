@@ -4,7 +4,7 @@ import 'antd/dist/antd.less';
 import './index.less';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { delete_cookie } from 'sfcookies';
-import { DingtalkOutlined, CrownOutlined, SettingOutlined } from '@ant-design/icons';
+import { RadarChartOutlined, CrownOutlined, ApartmentOutlined } from '@ant-design/icons';
 import logo from './logo.png'
 import LogCard from "./pages/LogCard";
 import Champions from "./components/Champions";
@@ -12,6 +12,7 @@ import Top from "./components/Top";
 import Jg from "./components/Jg";
 import Mid from "./components/Mid";
 import Adc from "./components/Adc";
+import Region from "./components/Region"
 import Sup from "./components/Sup";
 import { useSelector } from "react-redux";
 import Home from "./components/Home";
@@ -29,6 +30,21 @@ function App() {
     window.location.reload(false);
     delete_cookie(cookie_key);
   }
+  const cities = [
+    "Bandle City",
+    "Bilgewater",
+    "Demacia",
+    "Ionia",
+    "Ixtal",
+    "Noxus",
+    "Piltover",
+    "Shadow Isles",
+    "Shurima",
+    "Targon",
+    "The Freljord",
+    "The Void",
+    "Zaun"
+  ]
 
   return (
   <BrowserRouter>
@@ -64,16 +80,13 @@ function App() {
               <Menu.Item key="5"><Link to="/adc">Adc</Link></Menu.Item>
               <Menu.Item key="6"><Link to="/sup">Support</Link></Menu.Item>
             </SubMenu>
-            <SubMenu key="sub2" icon={<DingtalkOutlined />} title="Items By Tier">
-              <Menu.Item key="7">option5</Menu.Item>
-              <Menu.Item key="8">option6</Menu.Item>
-              <Menu.Item key="9">option7</Menu.Item>
-              <Menu.Item key="10">option8</Menu.Item>
+            <SubMenu key="sub2" icon={<RadarChartOutlined />} title="Regions">
+              {cities.map((e, idx) => <Menu.Item key={`${idx + 7}`}><Link to={`/regions/${idx + 1}`}>{e}</Link></Menu.Item>)}
             </SubMenu>
-            <SubMenu key="sub3" icon={<SettingOutlined />} title="Settings">
-              <Menu.Item key="11">option9</Menu.Item>
-              <Menu.Item key="12">option11</Menu.Item>
-              <Menu.Item key="13">option12</Menu.Item>
+            <SubMenu key="sub3" icon={<ApartmentOutlined />} title="More">
+              <Menu.Item key="20">About Us</Menu.Item>
+              <Menu.Item key="21">Whats Next?</Menu.Item>
+              <Menu.Item key="22">AppAcademy</Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
@@ -84,6 +97,7 @@ function App() {
               <Route path="/login"><div className="log-card" style={{ textAlign: "center" }}><LogCard /></div></Route>
               <Route path="/champions/:id" component={Champion}></Route>
               <Route path="/champs"><div><Champions /></div></Route>
+              <Route path="/regions/:id"><div><Region /></div></Route>
               <Route path="/top"><div><Top /></div></Route>
               <Route path="/jg"><div><Jg /></div></Route>
               <Route path="/mid"><div><Mid /></div></Route>

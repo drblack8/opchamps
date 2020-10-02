@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "antd/dist/antd.less";
-import { Card, Image } from "antd";
-import { NavLink } from "react-router-dom";
+import { Image } from "antd";
+
 import Comments from "./Comments";
 const Champion = (props) => {
   const [error, setError] = useState(null);
@@ -10,12 +10,12 @@ const Champion = (props) => {
   const champId = props.match.params.id;
 
   const randomNum = () => {
-    return Math.floor(Math.random() * 4) - 1;
+    return Math.floor(Math.random() * 2);
   };
-
+console.log(randomNum());
   useEffect(() => {
     console.log("run use effect");
-    fetch(`/api/champions/banana/${champId}`)
+    fetch(`/api/champions/${champId}`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -37,10 +37,9 @@ const Champion = (props) => {
     return (
       <>
         <div className="champ-div">
-          <Image
+          <img
             className="clip_img"
-            width={1300}
-            src={require(`../../public/assets/splashes/${items.name}_0.jpg`)}
+            src={require(`../../public/assets/splashes/${items.name}_${randomNum()}.jpg`)}
           />
         </div>
         <div className="champ-content">
