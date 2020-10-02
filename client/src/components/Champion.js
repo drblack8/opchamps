@@ -29,7 +29,7 @@ const Champion = (props) => {
           setError(error);
         }
         );
-      }, [champId])
+      }, [champId]) //maybe change this
   const namez = items.name
   console.log("asdfasdf: ", namez)
 
