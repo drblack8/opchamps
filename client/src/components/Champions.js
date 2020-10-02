@@ -40,7 +40,7 @@ const Champions = () => {
                     <Image
                       className="shadows"
                       width={200}
-                      src={require(`${item.name}_0.jpg`)}
+                      src={require(`../../public/assets/icons/${item.name}_0.jpg`)}
                     />
                     <div className="champ-title">
                       {item.name} {item.title}
