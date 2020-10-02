@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Champions.associate = function(models) {
     // associations can be defined here
+    Champions.hasMany(models.Comment, { foreignKey: 'championId' });
   };
   return Champions;
 };
