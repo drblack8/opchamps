@@ -1,5 +1,5 @@
 import React from 'react';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 import { Card, Space } from 'antd';
 import LoginPage from './LoginPage'
 import SignupPage from './SignupPage'

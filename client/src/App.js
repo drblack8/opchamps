@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Link, NavLink, Route, Switch } from "react-router-dom";
-import 'antd/dist/antd.css';
-import './index.css';
+import 'antd/dist/antd.less';
+import './index.less';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { delete_cookie } from 'sfcookies';
 import { DingtalkOutlined, CrownOutlined, SettingOutlined } from '@ant-design/icons';
@@ -32,7 +32,7 @@ function App() {
 
   return (
   <BrowserRouter>
-    <Layout>
+    <Layout >
     <Header className="header">
       <img className="logo" src={logo} alt='logo' />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}  >
@@ -47,7 +47,7 @@ function App() {
       <Breadcrumb style={{ margin: '16px 0' }}>
 
       </Breadcrumb>
-      <Layout className="site-layout-background" style={{ padding: '24px 0' }}>
+      <Layout className="site-layout-background" >
         <Sider className="site-layout-background" width={200}>
           <Menu
             mode="inline"

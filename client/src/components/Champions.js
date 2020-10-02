@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "antd/dist/antd.css";
+import "antd/dist/antd.less";
 import { Card, Image } from "antd";
 import { NavLink } from "react-router-dom";
 
@@ -42,7 +42,7 @@ const Champions = () => {
                       width={200}
                       src={require(`../../public/assets/icons/${item.name}_0.jpg`)}
                     />
-                    <div className="champ-title">
+                    <div className="champions-title">
                       {item.name} {item.title}
                     </div>
                   </div>

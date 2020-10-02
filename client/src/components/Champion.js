@@ -1,61 +1,65 @@
 import React, { useEffect, useState } from "react";
-import "antd/dist/antd.css";
+import "antd/dist/antd.less";
 import { Card, Image } from "antd";
 import { NavLink } from "react-router-dom";
-
 
 const Champion = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState({});
-  const champId = props.match.params.id
+  const [items, setItems] = useState(null);
+  const champId = props.match.params.id;
+
   const randomNum = () => {
-    return (Math.floor(Math.random() * 4) - 1);
-  }
+    return Math.floor(Math.random() * 4) - 1;
+  };
 
   useEffect(() => {
+    console.log("run use effect");
     fetch(`/api/champions/banana/${champId}`)
       .then((res) => res.json())
       .then(
         (result) => {
-          const sum = { items: result };
-          console.log(sum.items)
-
+          setItems(result);
           setIsLoaded(true);
-          setItems(sum.items);
         },
         (error) => {
-          setIsLoaded(true);
           setError(error);
+          setIsLoaded(true);
         }
-        );
-      }, [champId]) //maybe change this
-  const namez = items.name
-  console.log("asdfasdf: ", namez)
+      );
+  }, [champId]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
     return <div>Loading...</div>;
-  } else {
-    console.log(items)
-    console.log(items.name)
+  } else if (items) {
     return (
-      <React.Fragment>
-      <div className="champ-tiles">
-        {/* <Image
-        className="shadows"
-        width={200}
-        src={img}
-      /> */}
-      </div>
-      <div className="champ-title">
-        {items.name} {items.title}
-      </div>
-      </React.Fragment>
-    )
-
+      <>
+        <div className="champ-div">
+          <Image
+            className="clip_img"
+            width={1300}
+            src={require(`../../public/assets/splashes/${items.name}_0.jpg`)}
+          />
+        </div>
+        <div className="champ-content">
+          <div className="champ-title">
+            {items.name} {items.title}
+          </div>
+          <div className="champ-quote">
+            {`"${items.blurb}"`}
+          </div>
+          <div className="champ-lore">
+            {items.lore}
+          </div>
+          <div className="champ-reg">
+            enter {items.reg}
+          </div>
+        </div>
+      </>
+    );
   }
-}
+};
 
 export default Champion;
