@@ -8,9 +8,7 @@ const { requireUser, generateToken, AuthenticationError } = require('../util/aut
 const { jwtConfig: { expiresIn }} = require('../../config')
 
 const router = express.Router();
-const TeemoJS = require('teemojs');
 
-let api = TeemoJS(process.env.RIOT_API, TeemoJS.championGGConfig);
 
 const validateLogin = [
     check("username").exists(),
