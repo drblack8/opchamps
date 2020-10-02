@@ -52,7 +52,7 @@ function App() {
           <Menu
             mode="inline"
             defaultSelectedKeys={['0']}
-
+            theme="dark"
             defaultOpenKeys={['sub1']}
             style={{ height: '100%' }}
           >

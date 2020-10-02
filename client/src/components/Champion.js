@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "antd/dist/antd.less";
 import { Card, Image } from "antd";
 import { NavLink } from "react-router-dom";
-
+import Comments from './Comments'
 const Champion = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -56,7 +56,9 @@ const Champion = (props) => {
           <div className="champ-reg">
             enter {items.reg}
           </div>
+
         </div>
+        <div><Comments /></div>
       </>
     );
   }
