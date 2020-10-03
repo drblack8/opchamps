@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "antd/dist/antd.less";
-import { Image } from "antd";
 
 import Comments from "./Comments";
 const Champion = (props) => {
@@ -38,6 +37,7 @@ console.log(randomNum());
       <>
         <div className="champ-div">
           <img
+            alt=''
             className="clip_img"
             src={require(`../../public/assets/splashes/${items.name}_${randomNum()}.jpg`)}
           />
