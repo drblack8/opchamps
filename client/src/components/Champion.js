@@ -7,19 +7,21 @@ const Champion = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState(null);
+  const [comments, setComments ] = useState(null)
   const champId = props.match.params.id;
 
   const randomNum = () => {
     return Math.floor(Math.random() * 2);
   };
-console.log(randomNum());
+
+
   useEffect(() => {
-    console.log("run use effect");
     fetch(`/api/champions/${champId}`)
       .then((res) => res.json())
       .then(
         (result) => {
-          setItems(result);
+          setItems(result[0]);
+          setComments(result[1])
           setIsLoaded(true);
         },
         (error) => {
@@ -28,6 +30,8 @@ console.log(randomNum());
         }
       );
   }, [champId]);
+
+  
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -52,7 +56,7 @@ console.log(randomNum());
           <div className="champ-reg">enter {items.reg}</div>
         </div>
         <div>
-          <Comments />
+          <Comments comments={comments}/>
         </div>
       </>
     );

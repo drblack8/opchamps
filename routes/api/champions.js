@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const asyncHandler = require("express-async-handler");
 const championRepository = require("../../db/champions-repo");
-
+const commentRepo = require("../../db/comments-repo")
 router.get(
   "/",
   asyncHandler(async (req, res) => {
@@ -53,7 +53,9 @@ router.get(
   "/:id",
   asyncHandler(async (req, res) => {
     const champion = await championRepository.one(req.params.id);
-    res.json(champion);
+    const comment = await commentRepo.coms(req.params.id)
+    res.send([champion, comment]);
+    
   })
 );
 
