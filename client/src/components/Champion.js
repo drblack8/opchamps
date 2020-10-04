@@ -4,7 +4,6 @@ import Comments from './Comments'
 
 
 const Champion = (props) => {
-  console.log('champion props: ',props);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState(null);
@@ -19,7 +18,6 @@ const Champion = (props) => {
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log(result);
           setItems(result[0]);
           setIsLoaded(true);
         },

@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const asyncHandler = require("express-async-handler");
 const championRepository = require("../../db/champions-repo");
-const commentRepo = require("../../db/comments-repo")
+const commentRepo = require("../../db/comments-repo");
+const db = require("../../db/models");
 router.get(
   "/",
   asyncHandler(async (req, res) => {
@@ -46,6 +47,14 @@ router.get(
   asyncHandler(async (req, res) => {
     const champion = await championRepository.sup();
     res.json(champion);
+  })
+);
+router.post(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const comment = await commentRepo.newComment(req.body)
+    const user = await db.User.findByPk(req.body.userId)
+    res.json({ comment, user })
   })
 );
 

@@ -9,4 +9,8 @@ async function coms(id) {
     })
 }
 
-module.exports = { coms }
+async function newComment(e) {
+    return await db.Comment.create({message: e.message, userId: e.userId, championId: e.championId })
+}
+
+module.exports = { coms, newComment }
