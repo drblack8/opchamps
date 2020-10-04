@@ -12,10 +12,10 @@ const Comments = (props) => {
   const time = (date) => {
     let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
 
-    return new Date(date).toLocaleString('en-US', options)
+    return new Date(date).toLocaleTimeString('en-US', options)
   };
   
-  console.log(time("2020-10-03T06:31:34.161Z"));
+
 
 
   useEffect(() => {
