@@ -1,101 +1,61 @@
-import React from 'react';
-import 'antd/dist/antd.less';
-import { Comment, Avatar, Form, Button, List, Input } from 'antd';
-import moment from 'moment';
-
-const { TextArea } = Input;
-
-const CommentList = ({ comments }) => (
-  <List
-    dataSource={comments}
-    header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
-    itemLayout="horizontal"
-    renderItem={props => <Comment {...props} />}
-  />
-);
-
-const Editor = ({ onChange, onSubmit, submitting, value }) => (
-  <>
-    <Form.Item>
-      <TextArea rows={4} onChange={onChange} value={value} />
-    </Form.Item>
-    <Form.Item>
-      <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="primary">
-        Add Comment
-      </Button>
-    </Form.Item>
-  </>
-);
-
-class Comments extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      comments: [...props.comments],
-      submitting: false,
-      value: props.comments.message,
-    };
-  }
+import React, { useEffect, useState } from "react";
+import "antd/dist/antd.less";
+import { Comment, List } from 'antd'
 
 
-  handleSubmit = () => {
-    if (!this.state.value) {
-      return;
-    }
+const Comments = (props) => {
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [comments, setComments ] = useState(null)
+  const champId = props.props.match.params.id;
 
-    this.setState({
-      submitting: true,
-    });
 
-    setTimeout(() => {
-      this.setState({
-        submitting: false,
-        value: '',
-        comments: [
-          {
-            author: 'Han Solo',
-            content: <p>{this.state.value}</p>,
-            datetime: moment().fromNow(),
-          },
-          ...this.state.comments,
-        ],
-      });
-    }, 1000);
-  };
 
-  handleChange = e => {
-    this.setState({
-      value: e.target.value,
-    });
-  };
+  useEffect(() => {
+    fetch(`/api/champions/${champId}`)
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setComments(result[1])
+          setIsLoaded(true);
+        },
+        (error) => {
+          setError(error);
+          setIsLoaded(true);
+        }
+      );
+  }, [champId]);
 
-  render() {
-    const { comments, submitting, value } = this.state;
-
+  
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  } else if (!isLoaded) {
+    return <div>Loading...</div>;
+  } else if (comments) {
     return (
-      <>
-        {comments.length > 0 && <CommentList comments={comments} />}
-        <Comment
-          avatar={
-            <Avatar
-              src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-              alt="Han Solo"
-            />
-          }
-          content={
-            <Editor
-              onChange={this.handleChange}
-              onSubmit={this.handleSubmit}
-              submitting={submitting}
-              value={value}
-            />
-          }
-        />
-      </>
+        <>
+          <List
+            dataSource={comments}
+            header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
+            itemLayout="horizontal"
+            
+            renderItem={el => <Comment 
+                author={el.User.username}
+                datetime={el.createdAt}
+                content={el.message}
+              />}
+          />
+        </>
     );
   }
-}
-
+};
 
 export default Comments;
+
+// {comments.map((el) => {
+          
+//   <Comment 
+//     author={comments.user}
+
+//   />
+//   >})}

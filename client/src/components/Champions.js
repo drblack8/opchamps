@@ -13,7 +13,6 @@ const Champions = () => {
       .then(
         (result) => {
           const sum = { items: [...result] };
-
           setIsLoaded(true);
           setItems(sum.items);
         },

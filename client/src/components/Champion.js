@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "antd/dist/antd.less";
-import Comments from "./Comments";
+import Comments from './Comments'
 
 
 const Champion = (props) => {
+  console.log('champion props: ',props);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState(null);
-  const [comments, setComments ] = useState(null)
   const champId = props.match.params.id;
-
   const randomNum = () => {
     return Math.floor(Math.random() * 2);
   };
@@ -20,8 +19,8 @@ const Champion = (props) => {
       .then((res) => res.json())
       .then(
         (result) => {
+          console.log(result);
           setItems(result[0]);
-          setComments(result[1])
           setIsLoaded(true);
         },
         (error) => {
@@ -56,7 +55,7 @@ const Champion = (props) => {
           <div className="champ-reg">enter {items.reg}</div>
         </div>
         <div>
-          <Comments comments={comments}/>
+          <Comments props={props}/>
         </div>
       </>
     );
