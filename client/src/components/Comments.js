@@ -52,11 +52,10 @@ const Comments = (props) => {
       );
   }, [champId]);
   
-  console.log(comments);
+  
   const handleSubmit = (message) => {
-
+    
     if (!value) {
-      console.log('shit');
       return
     }
 

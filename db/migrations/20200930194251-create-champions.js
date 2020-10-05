@@ -29,6 +29,9 @@ module.exports = {
       reg: {
         type: Sequelize.STRING
       },
+      region: {
+        type: Sequelize.INTEGER
+      },
       lore: {
         type: Sequelize.TEXT
       },

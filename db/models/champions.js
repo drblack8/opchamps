@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING,
     pos: DataTypes.STRING,
     reg: DataTypes.STRING,
+    region: DataTypes.INTEGER,
     lore: DataTypes.TEXT,
   }, {});
   Champions.associate = function(models) {

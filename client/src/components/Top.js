@@ -8,23 +8,15 @@ const Top = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [tops, setTops] = useState([]);
 
-  // Note: the empty deps array [] means
-  // this useEffect will run once
-  // similar to componentDidMount()
   useEffect(() => {
     fetch("/api/champions/top")
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log("Top stuff: ", result);
-          const sum = { tops: [...result] };
-
           setIsLoaded(true);
-          setTops(sum.tops);
+          setTops(result);
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
+
         (error) => {
           setIsLoaded(true);
           setError(error);
