@@ -54,7 +54,7 @@ function App() {
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}  >
           <Menu.Item key="1"><Link to="/home">Home</Link></Menu.Item>
           <Menu.Item key="2"><Link to="/champs">Champions</Link></Menu.Item>
-          <Menu.Item key="3">Items</Menu.Item>
+          <Menu.Item key="3"><Link to="/regions/1">Regions</Link></Menu.Item>
           {!currentUserId && <Menu.Item key="4" style={{float: 'right'}}><Link to="/login">Log In</Link></Menu.Item>}
           {currentUserId && <Menu.Item key="4" style={{float: 'right'}}><NavLink to="/home" onClick={logout}>Log Out</NavLink></Menu.Item>}
       </Menu>

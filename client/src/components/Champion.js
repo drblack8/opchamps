@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "antd/dist/antd.less";
 import Comments from './Comments'
+import { Link } from "react-router-dom";
 
 
 const Champion = (props) => {
@@ -50,7 +51,7 @@ const Champion = (props) => {
           </div>
           <div className="champ-quote">{`"${items.blurb}"`}</div>
           <div className="champ-lore">{items.lore}</div>
-          <div className="champ-reg">enter {items.reg}</div>
+          <div className="champ-reg"><Link to={`/regions/${items.region}`}>enter {items.reg}</Link></div>
         </div>
         <div>
           <Comments props={props}/>

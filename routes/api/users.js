@@ -33,10 +33,9 @@ router.get('/', asyncHandler(async function (req, res, next) {
 router.post(
     "/",
     validateSignup,
-    handleValidationErrors,
     asyncHandler(async function (req, res) {
         const user = await User.signup(req.body);
-
+        console.log("THIS IS THE SIGN UP", req.body);
         const token = await generateToken(user);
         res.cookie("token", token, {
             maxAge: expiresIn * 1000,

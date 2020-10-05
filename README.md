@@ -6,24 +6,22 @@ This markdown file includes a feature list, project build run-down, and reacts g
 
   - Login/Auth
     > Users will have dedicated database using either mongo/sql. Where user info will be stored and tied to info such as comments and favorite champions.
-  - Champions page and search functionality
-    > The constantly-updated Riot API will fill the site with new and old League of Legends Champions and their stats/info. The start page will essentially be a search results page that shows all champions(approx 150). A search bar that will perpetually exist in the navbar will allow a user to narrow the results based on champion name or a champions most played role.
+  - Champions page
+    > The champions page will list all champions in the game of league of legends. Clicking on any of them will bring the user to the chapion specific page. 
   - Champion page
-    > A series of pages for a champion that will show statistics and detailed information for a specific League of Legends champion.
-  - Matchups
-    > A preview and button will lead to a matchup page that shows favorable matchups for a specific champion as well as its counter-matchups.
+    > Users and non-users alike will beable to see the origin story for their favorite league of legends characters.
+  - Regions
+    > A deep dive in to the universe of Runterra, home of all League of Legends chapions. 
   - User comments
-    > A user will be able to leave comments on a champion specific page as well as specific matchups.
-  - User favorites
-    > A sidebar on the start page will show a users favorite champions and will allow the user to quickly find their page without a search.
+    > A user will be able to leave comments on a champion specific page.
+
 
 # User stories:
 
  - As a OPChamps User, I'd like to be able to leave my thoughts on a specific champion for other users to see.
- - As a OPChamps User, I'd like to be able to leave my thoughts on a specific matchup for other users to see.
- - As a OPChamps User, I'd like to see specific item builds on champions to help me while playing.
- - As a OPChamps User, I'd like to be able to search for a specific champion and see their info/stats.
- - As a OPChamps User, I'd like to be able to favorite champions for easy access in the future.
+ - As a OPChamps User, I'd like to see specific regions and the champions that come from it. 
+ - As a OPChamps User, I'd like to be able to search/sort for a specific champion and see their info/story.
+
 
 # React docs:
 
