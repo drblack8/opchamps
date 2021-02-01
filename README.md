@@ -1,19 +1,19 @@
 
-# RiftStats
-*By Daniel Black - [Check out RiftStats](https:/gxrift.com/)*
-- League of Legends Stat Analysis
-- Updates to Live game analysis coming soon!
+# OPChamps
+*By Daniel Black - [Check out OPChamps](https://opchamps.herokuapp.com/home)*
+- League of Legends Lore
+- Enables user discussion
 
 **Table of Contents**
 
-* [RiftStats at a Glance](#WhatsInTheSauce-at-a-glance)
+* [OPChamps at a Glance](#WhatsInTheSauce-at-a-glance)
 * [Application Architecture & Technologies Used](#application-architecture)
 * [Backend Overview](#backend-overview)
 * [Frontend Overview](#frontend-overview)
 * [Security & Authorization](#security-&-authorization)
 * [Conclusion & Future Features](#conclusion-&-future-features)
 
-## RiftStats at a Glance
+## OPChamps at a Glance
 RiftStats is a full-stack web app that allows users to track their live, in-game stats from the worlds most popular video game: League of Legends. In addition to a comprehensive match history a user can also see a detailed statistical analysis for all characters they play in-game as well as their ranked statistics.
 
 RiftStats uses the [Riot API](https://developer.riotgames.com/) for retrieval of dynamic data, such as match history. Static data, such as images and champion names are accessed through Riot's DataDragon database.
