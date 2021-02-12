@@ -14,7 +14,7 @@
 * [Conclusion & Future Features](#conclusion-&-future-features)
 
 ## OPChamps at a Glance
-RiftStats is a full-stack web app that allows users to track their live, in-game stats from the worlds most popular video game: League of Legends. In addition to a comprehensive match history a user can also see a detailed statistical analysis for all characters they play in-game as well as their ranked statistics.
+OPChamps is a full-stack web app that allows users to explore and discus the world and characters from the worlds most popular video game: League of Legends. An easy-to-use comment section for users to interact combined with a comrehensive info-rich database allow for an informative user expirience.
 
 RiftStats uses the [Riot API](https://developer.riotgames.com/) for retrieval of dynamic data, such as match history. Static data, such as images and champion names are accessed through Riot's DataDragon database.
 
