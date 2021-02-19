@@ -16,46 +16,41 @@
 ## OPChamps at a Glance
 OPChamps is a full-stack web app that allows users to explore and discus the world and characters from the worlds most popular video game: League of Legends. An easy-to-use comment section for users to interact combined with a comrehensive info-rich database allow for an informative user expirience.
 
-RiftStats uses the [Riot API](https://developer.riotgames.com/) for retrieval of dynamic data, such as match history. Static data, such as images and champion names are accessed through Riot's DataDragon database.
+OPChamps uses the [Riot API](https://developer.riotgames.com/) Data Dragon for retrieval of Static data, such as images and stories. 
 
 #### Application Architecture
-RiftStats is a full stack application utilizing [Flask SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/), [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/) and [Postgress](https://www.postgresql.org/) for the backend/database.
+OPChamps is a full stack application utilizing [Express.js](https://expressjs.com/), [Sequelize ORM](https://sequelize.org/) and [Postgress](https://www.postgresql.org/) for the backend/database.
 
 ## Backend Overview
-The application [Flask](https://flask.palletsprojects.com/en/1.1.x/) server connects the database and the results from a GET request to the Riot API to the frontend(React). Redux and React Hooks manage the data it receives from Flask.  The backend is the most complicated part of the application as it alleviates the need to make excessive API calls. A single page load can require up to 500 API calls and storing results with SQL made the website infinitely more efficient. Only with the press of an update button will the backend ever make an API call.
+The application [Express.js](https://expressjs.com/) server connects the database to the frontend(React). Redux and React Hooks manage the data it receives from the server. 
 
 
 ## Frontend Overview
 
 [React](https://reactjs.org/) engine hosts the entire frontend. The backed is accessed through Fetches using the useEffect Hook.  From there, the
-[hooks](https://reactjs.org/docs/hooks-intro.html) temporarily store the data on a page. CSS then displays the data neatly after using a plethora of algorithms to turn the data into "readable" statistics.
+[hooks](https://reactjs.org/docs/hooks-intro.html) temporarily store the data on a page. CSS then displays the data.
 
 The main content on the site cannot be changed to fit a mobile screen in an effective way, and thus the site needs to be kept at at least a certain size.
-
-The site attempts to maintain a pretty simple theme, keeping it simple and clean so data can be displayed in the easiest possible way.
 
 
 ## Conclusion & Future Features
 
-RiftStats not only enhanced my abilities as a software engineer but also allowed me to combine two passions. The application was a joy to create. So much so, thatI decided to buy a domain and continue work on it. I hope this portfolio piece can turn into something even better and soon!
+OPChamps not only enhanced my abilities as a software engineer but also allowed me to combine two passions. The application was a joy to create and serves as a reference to my first expirience with React. 
 
-In the future I will be looking to add OAuth and a live game feature.
 
-Thanks for checking out [RiftStats](https://whatsinthesauce.herokuapp.com/)!
+Thanks for checking out [OPChamps](https://OPChamps.herokuapp.com/home)!
 
 # User Stories
 
-&check; As a user I want to easily access my data quickly, even when in the midst of a game.
+&check; As a user I'd like to be able to comment and dscuss champion lore.
 
-&check; As a user I'd need my data to be accurate so I can improve my gameplay.
+&check; As a user I'd like a lot of info on specific champions as I already am familiar with the game.
 
-&check; As a user I'd like to be able to update my data at any given time, even seconds after I complete a game.
+&check; As a user I'd like to see more about the regions of the game.
 
 # MinVP
-&check; Match History
+&check; Comments
 
-&check; Search Functionality
+&check; Sort Functionality 
 
-&check; Riot API Connection
-
-&check; Ranked & Champion Statistics
+&check; Redux Auth
