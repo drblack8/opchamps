@@ -48,7 +48,7 @@ Thanks for checking out [OPChamps](https://OPChamps.herokuapp.com/home)!
 
 &check; As a user I'd like to see more about the regions of the game.
 
-# MinVP
+# Min Value 
 &check; Comments
 
 &check; Sort Functionality 
