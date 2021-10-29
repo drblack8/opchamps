@@ -1,5 +1,5 @@
 
-# OPChamps (Currently being updated)
+# OPChamps (Currently being updated to new Heroku Standards)
 *By Daniel Black - [Check out OPChamps](https://opchamps.herokuapp.com/home)*
 - League of Legends Lore
 - Enables user discussion
@@ -16,13 +16,13 @@
 ## OPChamps at a Glance
 OPChamps is a full-stack web app that allows users to explore and discus the world and characters from the worlds most popular video game: League of Legends. An easy-to-use comment section for users to interact combined with a comrehensive info-rich database allow for an informative user expirience.
 
-OPChamps uses the [Riot API](https://developer.riotgames.com/) Data Dragon for retrieval of Static data, such as images and stories. 
+OPChamps uses the [Riot API](https://developer.riotgames.com/) Data Dragon for retrieval of Static data, such as images and stories.
 
 #### Application Architecture
 OPChamps is a full stack application utilizing [Express.js](https://expressjs.com/), [Sequelize ORM](https://sequelize.org/) and [Postgress](https://www.postgresql.org/) for the backend/database.
 
 ## Backend Overview
-The application [Express.js](https://expressjs.com/) server connects the database to the frontend(React). Redux and React Hooks manage the data it receives from the server. 
+The application [Express.js](https://expressjs.com/) server connects the database to the frontend(React). Redux and React Hooks manage the data it receives from the server.
 
 
 ## Frontend Overview
@@ -35,7 +35,7 @@ The main content on the site cannot be changed to fit a mobile screen in an effe
 
 ## Conclusion & Future Features
 
-OPChamps not only enhanced my abilities as a software engineer but also allowed me to combine two passions. The application was a joy to create and serves as a reference to my first expirience with React. 
+OPChamps not only enhanced my abilities as a software engineer but also allowed me to combine two passions. The application was a joy to create and serves as a reference to my first expirience with React.
 
 
 Thanks for checking out [OPChamps](https://OPChamps.herokuapp.com/home)!
@@ -48,9 +48,9 @@ Thanks for checking out [OPChamps](https://OPChamps.herokuapp.com/home)!
 
 &check; As a user I'd like to see more about the regions of the game.
 
-# Min Value 
+# Min Value
 &check; Comments
 
-&check; Sort Functionality 
+&check; Sort Functionality
 
 &check; Redux Auth
