@@ -39,18 +39,3 @@ OPChamps not only enhanced my abilities as a software engineer but also allowed 
 
 
 Thanks for checking out [OPChamps](https://OPChamps.herokuapp.com/home)!
-
-# User Stories
-
-&check; As a user I'd like to be able to comment and dscuss champion lore.
-
-&check; As a user I'd like a lot of info on specific champions as I already am familiar with the game.
-
-&check; As a user I'd like to see more about the regions of the game.
-
-# Min Value
-&check; Comments
-
-&check; Sort Functionality
-
-&check; Redux Auth
