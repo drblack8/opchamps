@@ -1,5 +1,5 @@
 
-# OPChamps (Currently being updated to new Heroku Standards)
+# OPChamps
 *By Daniel Black - [Check out OPChamps](https://opchamps.herokuapp.com/home)*
 - League of Legends Lore
 - Enables user discussion
